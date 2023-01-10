@@ -2,6 +2,13 @@
 <html lang="de">
   <head>
     <title>Franky's Hauptseite</title>
+	<script>
+		var fontsAllowed = confirm("Möchten Sie Google Fonts zulassen? Einverstanden das Fonts von einen Amerikanischen-Server geladen werden? Ohne Zustimmung wird die Seite nicht geladen.");
+			if (!fontsAllowed) {
+				window.location.href = "http://example.com";
+			}
+	</script>
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
