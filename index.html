@@ -5,142 +5,139 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
-   
-<!-- navigation 
-	Erklärvideo über die Erstellung der Seite		hier oben sind die Links die Fonts von GoogleFonts abruft
-  https://www.youtube.com/watch?v=dOgFkZiVC8w&t=1862s
- -->
 
-<style>
-   body {
-	font-family: 'Open Sans', sans-serif;
-	background-color: #ccffff;
-	padding-left: 100px;
-	padding-right: 100px;
-	}
-		.header-image {
-			width: 95%;
-			height: 600px;
-			object-fit: cover;
-			object-position: top;
-			display: block;
-		}
-		.headline {
-			color: #831D17;
-		}
-		.image-container {
-			background-color: white;
-			padding: 16px;
-		}
-		.navbar {
-			display: flex;
-			justify-content: space-between;
-			align-items:center;
-		}
-		a {
-			color: #831D17;
-			text-decoration: none;
-			margin-left: 16px;
-			font-weight: 700;
-		}	
-		a:hover{
-			text-decoration: underline;
-		}		
-		.text-container {
-			background-color: #DEDEDE;
-			padding: 8px;
-			color: #484846;
-			font-weight 600;
-		}	
-		.maps-container  {
-			margin-top: 16px;
-			display: flex;
-			justify-content: space-between;
-		}	
-		.maps-right  {
-			width: 50%;
-			margin-left: 16px;
-			background-color: #DEDEDE;
-			padding: 8px;
-			color: #484846;
-			font-weight 600;
-		}
-		
-
-		#pulsating-text:hover {
-		animation: pulsate 1s ease-out; /* Animation startet beim Hover */
-		}
-
-		@keyframes pulsate {
-		0% {transform: scale(1);}
-		50% {transform: scale(1.05);}
-		100% {transform: scale(1);}
-		}
-		#rotating-link {
-			animation: rotate 1s linear infinite;
-			animation-iteration-count: 1;
-		}
-		#rotating-link-lange {
-			animation: rotate 1s linear infinite;
-			animation-iteration-count: 3;
-		}
-@keyframes rotate {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
-}
-		li {
-  padding-left: 20px;
-}
-   </style
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+  
+    <style>
+    /* reset css */
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+    /* Document
+    ========================================================================== */
+    /**
+    * 1. Correct the line height in all browsers.
+    * 2. Prevent adjustments of font size after orientation changes in iOS.
+    */
+    html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    }
+    /* Sections
+    ========================================================================== */
+    /**
+    * Remove the margin in all browsers.
+    */
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #F3F5F6;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin: 0;
+    }
+    /* header-image */
+    .header-image {
+        width: 95%;
+        height: 600px;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+    /* headline */
+    .headline {
+        color: #831D17;
+    }
+    /* image-container */
+    .image-container {
+        background-color: white;
+        padding: 16px;
+    }
+    /* navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* links */
+	  a {
+        color: #831D17;
+        text-decoration: none;
+        margin-left: 16px;
+        font-weight: 700;
+    }
+    /* hover links */
+    a:hover{
+        text-decoration: underline;
+    }
+    /* text-container */
+    .text-container {
+        background-color: #DEDEDE;
+        padding: 8px;
+        color: #484846;
+        font-weight: 600;
+    }
+    /* maps-container */
+    .maps-container  {
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    /* maps-right */
+    .maps-right  {
+        width: 50%;
+        margin-left: 16px;
+        background-color: #DEDEDE;
+        padding: 8px;
+        color: #484846;
+        font-weight: 600;
+    }
+    /* pulsating-text */
+    #pulsating-text:hover {
+        animation: pulsate 1s ease-out; /* Animation startet beim Hover */
+    }
+    /* keyframe animation */
+    @keyframes pulsate {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.05);}
+        100% {transform: scale(1);}
+    }
+    /*rotating link */
+    #rotating-link {
+        animation: rotate 1s linear infinite;
+    }
+    @keyframes rotate {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
+    /*li*/
+    li {
+        padding-left: 20px;
+    }
+    </style>
   </head>
-  
-  <!-- navigation 
-  https://www.youtube.com/watch?v=dOgFkZiVC8w&t=1862s
-  -->
-  
-  
   <body>
-	<div class="navbar">
-		
-		<div id="pulsating-text">
-			<div class="element effekt headline" >
-		<h1>Franky's  DIGITALE WELT</h1>
-	</div>
-</div>
-		
-			=============================================>
-  
-			<a id="rotating-link" href="https://www.youtube.com/channel/UCOrqmZoyU14QBfEsFENjELA">Franky GoTo</a>
-			<a id="rotating-link-lange" href="https://www.youtube.com/channel/UCRSdf4-_69xVB5k49ufp1LQ">TierEcke</a>
-			<a id="rotating-link" href="https://frankblack23.wordpress.com/">Blog</a>
-			<a id="rotating-link" href="https://frankblack23.wordpress.com/">Blog</a>
-			<a id="rotating-link-lange" href="https://frankblack23.wordpress.com/">Blog</a>
-	</div>
-  <div class="image-container">
-	<img class="header-image" src="Titel Franky am See.jpg">
-	<div class="text-container">
-		Franky wie er leibt und lebt
-	</div>
-  </div>
-  <div class="maps-container">
-	<iframe src="https://frankblack23.wordpress.com/" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  
-<div class="maps-right" >
-		<p>Projekte </p>
-		<br>
-		<li>Excel </li>
-		<li>WordPress </li>
-		<li>Projektmanagement</li> 
-	</div>
-</div>
-
-		
-  </div>
-  </div>
+    <!-- navigation -->
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Über uns</a>
+      <a href="#">Kontakt</a>
+    </div>
+    <!-- header-image -->
+    <img class="header-image" src="https://via.placeholder.com/1200x600" alt="header-image">
+    <h1 class="headline">Willkommen bei Franky's</h1>
+    <div class="image-container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget enim euismod, convallis nibh vel, auctor ante. Integer tincidunt, massa a tincidunt egestas, metus purus pharetra velit, vel tincidunt velit velit vel velit.</p>
+    </div>
+	 <div class="text-container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget enim euismod, convallis nibh vel, auctor ante. Integer tincidunt, massa a tincidunt egestas, metus purus pharetra velit, vel tincidunt velit velit vel velit.</p>
+    </div>
+    <div class="maps-container">
+      <div id="map"></div>
+      <div class="maps-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget enim euismod, convallis nibh vel, auctor ante. Integer tincidunt, massa a tincidunt egestas, metus purus pharetra velit, vel tincidunt velit velit vel velit.</p>
+      </div>
+    </div>
+    <a href="#" id="pulsating-text">Pulsierenden Text</a>
+    <a href="#" id="rotating-link">Rotierenden Link</a>
   </body>
 </html>
-
