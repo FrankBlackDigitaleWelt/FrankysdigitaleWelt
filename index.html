@@ -91,6 +91,28 @@
 		li {
 			padding-left: 20px;
 			}
+/* Stil für die Laufschrift */
+      .marquee {
+        width: 100%;
+        line-height: 50px;
+        background-color: #ccc;
+        color: #000066;
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+		margin-top: 10px;
+		margin-bottom:10px;
+      }
+/* Animation für die Laufschrift */
+      .marquee span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+      }
+      @keyframes marquee {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+      }
    </style
   </head>
   
@@ -116,9 +138,14 @@
 	</div>
   <div class="image-container">
 	<img class="header-image" src="Titel Franky am See.jpg">
-	<div class="text-container">
-		Ein gutes Bild sagt mehr als 100 Worte 
 	</div>
+	<div class="headline">
+		<marquee behavior="alternate" scrolldelay="1" scrollamount="2">
+Projekte + + + E x c e l + + + W o r d P r e s s + + + A G I L E S + + + H Y B R I D E S + + + T R A D I T I O N E L L E S + + + Projektmanagement
+</marquee>
+		<div class="marquee">
+			<span>N E W S T I C K E R + + + BLOG + + + frankblack23.wordpress.com + + + WEBSEITE + + + frankblackdigitalewelt.github.io/FrankysdigitaleWelt + + +N E W S T I C K E R + + + G R A T I S  &  U M S O N S T + + +</span>
+		</div>
   </div>
   <div class="maps-container">
 	<iframe src="https://frankblack23.wordpress.com/" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -142,4 +169,3 @@
   </div>
   </body>
 </html>
-
