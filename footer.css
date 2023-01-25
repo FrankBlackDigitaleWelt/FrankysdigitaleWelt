@@ -92,18 +92,13 @@ footer h2{
     }
     }
 @media(max-width: 900px){
-        .grid_container{
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto auto auto;
-            
-            grid-template-areas: 
-            "item1 item2"
-            "item4 item7"
-            "item6 item5"
-            "item3 item3";
+    .grid_container{
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        grid-template-rows: auto;
+
         }
         }
-        @media(max-width: 650px){
+@media(max-width: 650px){
         footer h2{
             font-size: 9vw;
         }

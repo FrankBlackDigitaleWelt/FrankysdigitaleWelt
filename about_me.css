@@ -13,8 +13,8 @@
 }
 #about_me_section img{
     width: 400px;
-    border: 15px solid var(--text-color);
     max-width: cal(90% - 30px);
+    border: 15px solid var(--text-color);
 }
 .about_me_container h2{
 font-size: 80px;
