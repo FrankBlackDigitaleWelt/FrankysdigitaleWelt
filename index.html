@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="footer.css">  
     
-    <style>
-        body {
+<style>
+body {
   background: rgb(30, 30, 40);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -68,28 +68,6 @@ textarea {
 
     </style>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-
-<script>
-    
-    $(document).ready(function() {
-      $("#contact-form").submit(function(e) {
-        e.preventDefault();
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var message = $("#message").val();
-        $.ajax({
-          type: "POST",
-          url: "https://frankblackdigitalewelt.github.io/FrankysdigitaleWelt/sendemail.js",
-          data: { name: name, email: email, message: message },
-          success: function(data) {
-            alert("E-Mail wurde versendet. Danke " + name + ", ich werde mich bald bei dir melden.");
-            $("#contact-form")[0].reset();
-          }
-        });
-      });
-    });
-  </script>
 </head>
 
 </script>
