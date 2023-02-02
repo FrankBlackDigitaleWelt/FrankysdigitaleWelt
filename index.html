@@ -185,6 +185,32 @@ textarea {
             <textarea name="text" class="feedback-input" placeholder="Kommentar"></textarea>
             <input type="submit" value="Senden"/>
           </form></p>
+          <div id="contact-form">
+            <input name="name" type="text" placeholder="Name">
+            <input name="email" type="text" placeholder="Email">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button id="submit-button">Submit</button>
+          </div>
+          
+          <script>
+              const submitButton = document.getElementById("submit-button");
+              submitButton.addEventListener("click", function() {
+                const name = document.querySelector('input[name="name"]').value;
+                const email = document.querySelector('input[name="email"]').value;
+                const message = document.querySelector('textarea[name="message"]').value;
+                const url = "https://docs.google.com/spreadsheets/d/1LjECltj07842elDxghCPMgCxO1SE1BOVonY0iaFwBMU/edit?usp=sharing";
+          
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", url);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                  if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert("Success!");
+                  }
+                };
+                xhr.send(`name=${name}&email=${email}&message=${message}`);
+              });
+            </script>
     </div>
 
     <div id="item4" class="grid_item">
