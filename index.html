@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wer ist Franz Ehn</title>
+    <title>Wer ist Franz</title>
     <link rel="stylesheet" href="generel_settings.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -12,68 +12,89 @@
     <link rel="stylesheet" href="footer.css">  
     
 <style>
-body {
-  background: rgb(30, 30, 40);
-  font-family: Arial, Helvetica, sans-serif;
-}
-form {
-  max-width: 420px;
-  margin: 50px auto;
-}
+    body {
+        background: rgb(30, 30, 40);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    form {
+        max-width: 420px;
+        margin: 50px auto;
+    }
 
-.feedback-input {
-  color: white;
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 5px;
-  line-height: 22px;
-  background-color: transparent;
-  border: 2px solid white;
-  transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
-  width: 100%;
-  box-sizing: border-box;
-  outline: 0;
-}
+    .feedback-input {
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        border-radius: 5px;
+        line-height: 22px;
+        background-color: transparent;
+        border: 2px solid white;
+        transition: all 0.3s;
+        padding: 13px;
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        outline: 0;
+    }
 
-.feedback-input:focus {
-  border: 2px solid #CC4949;
-}
+    .feedback-input:focus {
+        border: 2px solid #CC4949;
+    }
 
-textarea {
-  height: 150px;
-  line-height: 150%;
-  resize: vertical;
-}
+    textarea {
+        height: 150px;
+        line-height: 150%;
+        resize: vertical;
+    }
 
-[type="submit"] {
-  width: 100%;
-  background: #828282; /* Graue Farbe für Submit-Button */
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-  color: white;
-  font-size: 24px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition: all 0.3s;
-  margin-top: -4px;
-  font-weight: 700;
-}
+    [type="submit"] {
+        width: 100%;
+        background: #828282; /* Graue Farbe für Submit-Button */
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: all 0.3s;
+        margin-top: -4px;
+        font-weight: 700;
+    }
 
-[type="submit"]:hover {
-  background: #5c5c5c; /* elegante, dazu passende Farbe bei Maus-Over */
-}
+    [type="submit"]:hover {
+        background: #5c5c5c; /* elegante, dazu passende Farbe bei Maus-Over */
+    }
 
-    </style>
+    #time {
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+</style>
 
 </head>
 
-</script>
-
-</head>
 <body>
+
+    <script>
+        if (!navigator.javaEnabled()) {
+          document.write("Bitte schalte Java ein, sonst kannst du nicht die volle Funktionalität der Seite erleben!");
+        } else {
+          var date = new Date();
+          var time = date.toLocaleTimeString();
+          var date = date.toLocaleDateString();
+      
+          document.getElementById("time").innerHTML = 
+            "Uhrzeit: " + time + "<br>" + 
+            "Datum: " + date + "<br>" + 
+            "IP-Adresse: " + "<br>" + 
+            "Benutzername: ";
+        }
+      </script>
+      
+
     <header>
         <div class="header_text">
             <nav>
