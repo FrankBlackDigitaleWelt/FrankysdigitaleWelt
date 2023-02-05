@@ -178,13 +178,18 @@ textarea {
     </div>
 
     <div id="item3" class="grid_item">
-        <h3>Kontakt</h3>
-        <p><form id="contact-form">      
-            <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-            <input name="email" type="text" class="feedback-input" placeholder="Email" />
-            <textarea name="text" class="feedback-input" placeholder="Kommentar"></textarea>
-            <input type="submit" value="Senden"/>
-          </form></p>
+        <h3>
+            Kontakt
+        </h3>
+        <p>
+            <form id="contact-form">      
+                <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+                <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                <textarea name="text" class="feedback-input" placeholder="Kommentar"></textarea>
+                <input type="submit" value="Senden"/>
+             </form>
+        </p>
+    <!-- 
           <div id="contact-form">
             <input name="name" type="text" placeholder="Name">
             <input name="email" type="text" placeholder="Email">
@@ -211,6 +216,7 @@ textarea {
                 xhr.send(`name=${name}&email=${email}&message=${message}`);
               });
             </script>
+-->
     </div>
 
     <div id="item4" class="grid_item">
