@@ -7,6 +7,9 @@
     align-items: center;
     gap: 100px;
     flex-wrap: wrap-reverse;
+    
+    font-family: Arial, sans-serif;
+     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
 footer{
     padding: 70px 0;
