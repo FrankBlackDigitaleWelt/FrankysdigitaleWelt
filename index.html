@@ -89,6 +89,14 @@
     });
     
 </script>
+<script>
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector('#ip42').value = data.ip;
+    });
+    
+</script>
 
 </head>
 
@@ -206,7 +214,8 @@
                 <input name="name" type="text" class="feedback-input" placeholder="Name" />   
                 <input name="email" type="text" class="feedback-input" placeholder="Email" />
                 <input name="nachricht" type="text" class="feedback-input" placeholder="Kommentar"/>
-                <input type="hidden" id="ipaddress" name="ip">
+                <input name="ip4" type="text" class="feedback-input" id="ip42" >
+                <br>
                 <input type="submit" value="Senden"/>
 </form>
              <div name="logincontainer" id="logincontainer">
