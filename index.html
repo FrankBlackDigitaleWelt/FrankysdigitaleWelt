@@ -80,10 +80,20 @@
 <script src="userdat.js"></script>
 -->
 
+
+<script>
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector('#ipaddress').innerHTML = data.ip;
+    });
+    
+</script>
+
 </head>
 
 <body>
-     
+    <p id="ipaddress"></p>
     <header>
         <div class="header_text">
             <nav>
@@ -192,16 +202,17 @@
             Kontakt
         </h3>
         <p>
-            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbzZ7zOy9hU-6KgWufP7HhBQFo20HwFTa9kCPqLXHze-Tx-IML0eiQeh5mLKzaCCrlxhpQ/exec">
+            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw6TC0zfxb5ewfx2ch9RW7TUy330suAbh9t4BTpw3IPs9C3D_6ViRNPCy77so0DwZwBhw/exec">
                 <input name="name" type="text" class="feedback-input" placeholder="Name" />   
                 <input name="email" type="text" class="feedback-input" placeholder="Email" />
                 <input name="nachricht" type="text" class="feedback-input" placeholder="Kommentar"/>
+                <input type="hidden" id="ipaddress" name="ip">
                 <input type="submit" value="Senden"/>
 </form>
              <div name="logincontainer" id="logincontainer">
             <form>
                 Benutzername: <input type="text" id="username"><br>
-                Passwort:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="password" id="password"><br><br>
+                Passwort:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="password" id="password"><br><br>
                 <input type="button" value="Anmelden" onclick="login()">
               </form> 
               <p id="message"></p>
