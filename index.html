@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="footer.css">  
     
     <script src="script.js"></script>
+    <script src="userdat.js"></script>
 
 <style>
     body {
@@ -76,32 +77,41 @@
 
 </style>
 
-<!--
-<script src="userdat.js"></script>
--->
-
-
 <script>
   fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
       document.querySelector('#ipaddress').innerHTML = data.ip;
-    });
-    
+    }); 
 </script>
+
 <script>
   fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
       document.querySelector('#ip42').value = data.ip;
     });
-    
 </script>
 
 </head>
 
 <body>
-    <p id="ipaddress"></p>
+
+    <!-- 
+        <p id="ipaddress"></p> 
+    
+    <div id="user-data">
+        
+      </div>
+      <script>
+        var userData = getUserData();
+        document.write("Datum und Uhrzeit: " + userData.dateTime + "<br>");
+        document.write("Betriebssystem: " + userData.os + "<br>");
+        document.write("Bildschirmauflösung: " + userData.screenResolution + "<br>");
+        document.write("Browsertyp: " + userData.browser + "<br>");
+      </script>
+    -->
+
     <header>
         <div class="header_text">
             <nav>
@@ -109,7 +119,6 @@
                     <label for="toggle_button">
                         <span class="material-symbols-rounded">Menu
                     </span></label>
-                    
                 <ul>
                     <li>
                         <a href="#about_me_section">
@@ -140,20 +149,18 @@
         </div>
         <div class="circle">
             <img src="FranzFoto9.jpg" id="image" alt="randomImage">
-            
         </div>
     </header>
+
     <section id="about_me_section">
         <img src="franky-see-sonnenuntergang.JPG" alt="">
         <div class="about_me_container">
             <h2>Über Mich</h2>
             <br>
             <p>In den vergangenen 25 Jahren habe ich mir viel Wissen und Know-how im Bereich der digitalen Welt angeeignet. Mit 12 Jahren habe ich bereits mein erstes Quiz in QBasic auf einen Amiga 500 programmiert. Wegen meiner Freude daran, mit Menschen zu arbeiten und ihnen dabei zu helfen, stehe ich gerne mit all meinem Wissen und Können für meine Kunden zur Verfügung. <br><br> Ich achte nicht nur auf Qualität, Sicherheit und Lösungsorientierung, sondern auch auf den Menschen. Nachhaltigkeit und gute Kommunikation sind mir wichtig, um die beste Lösung für deine Zukunft in der digitalen Welt zu gestalten. <br><br>Im Moment organisiere ich für einen der größten Schulungsinstutute in Österreich, Ausbildungen in Richtung Projektmanagement und Wordpress.<br><br>Setze dich mit mir in Verbindung und ergreife den ersten Schritt in Richtung einer besseren Zukunft in der digitalen Welt. </p>
-        </div>
-
-
-            
+        </div>           
     </section>
+
     <section id="services_section">
         <!-- der Zusatz &shy gibt an das bei kleinen Fenstern das Wort abgedrennt werden kann -->
             <h2>Projekte</h2>
@@ -211,23 +218,45 @@
         </h3>
         <p>
             <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw6TC0zfxb5ewfx2ch9RW7TUy330suAbh9t4BTpw3IPs9C3D_6ViRNPCy77so0DwZwBhw/exec">
-                <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-                <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                <input name="nachricht" type="text" class="feedback-input" placeholder="Kommentar"/>
-                <input name="ip4" type="text" class="feedback-input" id="ip42" >
+                <input name="name" type="text" class="feedback-input" placeholder="Name"/>   
+                <input name="email" type="text" class="feedback-input" placeholder="Email"/>
+                <input name="nachricht" type="text" class="feedback-input" placeholder="Nachricht"/>
+
+                <input type="hidden" id="datetime" name="datetime"/>
+                <input type="hidden" id="os" name="os"/>
+                <input type="hidden" id="screenResolution" name="screenResolution"/>
+                <input type="hidden" id="browser" name="browser"/>
+
+                <input type="hidden" class="feedback-input" id="ip42" name="ip"/>
+                
                 <br>
+                
                 <input type="submit" value="Senden"/>
-</form>
+            </form>
+<script>
+    var userData = getUserData();
+    
+    // Hier werden die Werte aus der userdat.js den entsprechenden Formularfeldern zugewiesen
+    document.getElementById("dateTime").value = userData.dateTime;
+    document.getElementById("os").value = userData.os;
+    document.getElementById("screenResolution").value = userData.screenResolution;
+    document.getElementById("browser").value = userData.browser;
+
+</script>
+<!-- 
              <div name="logincontainer" id="logincontainer">
             <form>
-                Benutzername: <input type="text" id="username"><br>
-                Passwort:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="password" id="password"><br><br>
-                <input type="button" value="Anmelden" onclick="login()">
-              </form> 
+                Benutzername: 
+                    <input type="text" id="username"><br>
+                Passwort: 
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                    <input type="password" id="password"><br><br>
+                    <input type="button" value="Anmelden" onclick="login()">
+            </form> 
               <p id="message"></p>
             </div>
         </p>
-    <!-- 
+    
           <div id="contact-form">
             <input name="name" type="text" placeholder="Name">
             <input name="email" type="text" placeholder="Email">
@@ -258,10 +287,10 @@
     </div>
 
     <div id="item4" class="grid_item">
-    <img src="tweeter.jpg" alt="">
-    <div>
-        <h3>Twitter</h3>
-    </div>
+        <img src="tweeter.jpg" alt="">
+            <div>
+                <h3>Twitter</h3>
+            </div>
     </div>
 
     <div id="item5" class="grid_item">
@@ -273,15 +302,15 @@
 
     <div id="item6" class="grid_item">
         <h3>
-        <a href="https://frankblack23.wordpress.com/" title="Hier ist ein BLOG auf WordPress.com der sich mit der digitalen Welt beschäftigt und noch vieles mehr">
-            <br><img src="WordPressLogo.jpg" alt="">
-        </a>
-        <br><br>
-        &nbsp;Blog - Digitale News
-       
-    </h3>    
+            <a href="https://frankblack23.wordpress.com/" title="Hier ist ein BLOG auf WordPress.com der sich mit der digitalen Welt beschäftigt und noch vieles mehr">
+                <br><img src="WordPressLogo.jpg" alt="">
+            </a>
+            <br><br>
+            &nbsp;
+                Blog - Digitale News
         
-        </div>
+        </h3>    
+    </div>
 
         <div id="item7" class="grid_item">
             <br>
